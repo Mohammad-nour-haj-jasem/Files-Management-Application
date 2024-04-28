@@ -1,0 +1,36 @@
+﻿@model Files.Domain.Models.FileUploade
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div style="background-color: #f2f2f2; padding: 15px; border-radius: 5px;">
+    <h4>File Upload Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Name</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+
+        <dt class="col-sm-2">Path</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Path)</dd>
+
+        <dt class="col-sm-2">File Type</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.FileType)</dd>
+
+        <dt class="col-sm-2">Description</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Description)</dd>
+
+        <dt class="col-sm-2">Created On</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.CreatedOn)</dd>
+
+        <dt class="col-sm-2">Created By</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.CreatedBy)</dd>
+    </dl>
+</div>
+
+<div style="margin-top: 15px;">
+    <a style="background-color: #007bff; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none;" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a>
+    <a style="background-color: #6c757d; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; margin-left: 10px;" asp-action="Index">Back to List</a>
+</div>
